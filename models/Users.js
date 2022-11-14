@@ -10,6 +10,9 @@ const UsersSchema = new Schema({
         unique: true,
         required: true,
         // how to match a valid email address
+        required: 'Email address is required',
+        validate: [validateEmail, 'Please fill a valid email address'],
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
     thoughts: {
         
@@ -22,4 +25,5 @@ const UsersSchema = new Schema({
             ref: 'Users'
         
     }
+
 })
