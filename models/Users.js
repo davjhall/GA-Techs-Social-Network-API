@@ -1,3 +1,7 @@
+
+
+
+
 const UsersSchema = new Schema({
     username: {
         type: String,
@@ -6,7 +10,7 @@ const UsersSchema = new Schema({
         trim: true
     },
     email: {
-        typr: String,
+        type: String,
         unique: true,
         required: true,
         // how to match a valid email address
@@ -26,4 +30,15 @@ const UsersSchema = new Schema({
         
     }
 
+    
+
 })
+
+
+postSchema.virtual('friendCount').get(function () {
+    return this.friends.length;
+  });
+
+  const Post = model('Users', UsersSchema);
+
+module.exports = Post;
