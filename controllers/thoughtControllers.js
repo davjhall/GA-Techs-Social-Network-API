@@ -1,23 +1,12 @@
-const { Thoughts } = require('../models');
+// const { Thoughts } = require('../models');
 
-const thoughtsData = [
-  {
-    category_name: 'Shirts',
-  },
-  {
-    category_name: 'Shorts',
-  },
-  {
-    category_name: 'Music',
-  },
-  {
-    category_name: 'Hats',
-  },
-  {
-    category_name: 'Shoes',
-  },
-];
-
-const seedThoughts = () => Thoughts.bulkCreate(thoughtsData);
-
-module.exports = seedThoughtds;
+// const thoughtsController = {
+  
+//   getUsers(req, res) {   // Get all Users
+//     Thoughts.find({})
+//       .then((users) => res.json(users))
+//         .catch((err) => res.status(500).json(err));
+      
+// },
+// }
+// module.exports = thoughtsController;

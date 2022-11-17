@@ -1,11 +1,13 @@
-const mongoose = require('mongoose');
-const Sequelize = require('sequelize');
+const { connect, connection } = require('mongoose');
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/ga-techs-social-network-apiDB', {   // Wrap Mongoose around local connection to MongoDB
+
+const connectionString =
+  process.env.MONGODB_URI;
+
+connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-
-module.exports = mongoose.connection;
+module.exports = connection;
