@@ -1,2 +1,5 @@
-const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
+
+const Thoughts = require('./Thoughts');
+const Users = require('./Users');
+
+module.exports = { Thoughts, Users };
